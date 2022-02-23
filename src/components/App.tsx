@@ -1,7 +1,10 @@
-import React, { FC } from 'react';
+import React from 'react';
+import AppRouter from './AppRouter';
 
-const App:FC = () => (
-  <div />
+const App = () => (
+  <div>
+    <AppRouter />
+  </div>
 );
 
 export default App;
