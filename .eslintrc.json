@@ -21,6 +21,8 @@
     "sourceType": "module"
   },
   "rules": {
+    "no-empty-pattern": "off",
+    "no-unused-vars": "off",
     "linebreak-style": "off",
     "react/jsx-filename-extension": [
       1,

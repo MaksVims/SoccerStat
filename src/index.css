@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
 @layer components {
   .nav-link {
     @apply py-4 inline-block text-gray-500 hover:text-black
@@ -9,5 +18,14 @@
 
   .nav-link--active {
     @apply border-b-4 border-b-orange-300 pointer-events-none text-black
+  }
+
+  .container {
+    @apply px-4 w-max block
+  }
+
+  .abs-y-center {
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
