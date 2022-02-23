@@ -9,7 +9,12 @@
   input[type="search"]::-webkit-search-results-decoration {
     display: none;
   }
+
+  * {
+    box-sizing: border-box;
+  }
 }
+
 
 @layer components {
   .nav-link {
@@ -21,7 +26,9 @@
   }
 
   .container {
-    @apply px-4 w-max block
+    width: 100%;
+    max-width: none;
+    padding: 0px 20px;
   }
 
   .abs-y-center {

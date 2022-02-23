@@ -14,7 +14,7 @@ const Search: FC<SearchProps> = ({ changeHandler }) => {
   }
 
   return (
-    <form onSubmit={(e) => e.preventDefault()}>
+    <form className="mb-8" onSubmit={(e) => e.preventDefault()}>
       <div className="relative inline-block">
         <input
           type="search"
