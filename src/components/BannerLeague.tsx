@@ -10,7 +10,7 @@ const BannerLeague: FC<BannerLeagueProps> = ({ league }) => {
 
   const navigate = useNavigate()
   const handlerClick = () => {
-    navigate(`/league/${league.id}`)
+    navigate(`/leagues/${league.id}`)
   }
 
   return (

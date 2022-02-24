@@ -8,7 +8,7 @@ const Header: FC = () => (
         <h1 className="font-bold text-3xl">ST</h1>
       </div>
       <nav className="space-x-10">
-        <CustomLink to="/">
+        <CustomLink to="/leagues">
           Лиги
         </CustomLink>
         <CustomLink to="/teams">

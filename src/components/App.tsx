@@ -2,7 +2,7 @@ import React from 'react';
 import AppRouter from './AppRouter';
 
 const App = () => (
-  <div>
+  <div className='flex flex-col min-h-[100vh]'>
     <AppRouter />
   </div>
 );

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Link, useMatch } from 'react-router-dom';
+import { Link, useLocation, useMatch } from 'react-router-dom';
 import cl from 'classnames'
 
 interface CustomLinkProps {
@@ -7,10 +7,8 @@ interface CustomLinkProps {
 }
 
 const CustomLink: FC<CustomLinkProps> = ({ to, children }) => {
-  const isActive = useMatch({
-    path: to,
-    end: to === '/',
-  })
+  const location = useLocation()
+  const isActive = location.pathname.includes(to)
 
   const classes = cl({
     'nav-link--active': isActive,
