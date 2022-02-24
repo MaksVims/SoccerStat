@@ -71,4 +71,17 @@
     }
   }
   
+  .match-result {
+    border: 1px solid gray;
+    border-bottom: 0px;
+    padding: 10px 10px;
+    display: grid;
+    grid-template-columns: max(150px) 1fr 1fr 50px 1fr 1fr;
+    column-gap: 10px;
+    text-align: center;
+  }
+
+  .match-result:last-child {
+    border-bottom: 1px;
+  }
 }

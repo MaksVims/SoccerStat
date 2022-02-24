@@ -5,6 +5,7 @@ import { useActions } from '../hooks/useActions';
 import { useAppSelector } from '../hooks/useAppSelector';
 import useFetch from '../hooks/useFetch';
 import { SoccerStatService } from '../service';
+import cl from 'classnames'
 
 const ListLeaguesPage: FC = () => {
   const [query, setQuery] = useState<string>('')
@@ -39,14 +40,19 @@ const ListLeaguesPage: FC = () => {
     <p className='text-center text-xl'>Указанные лиги не найдены</p>
   )
 
+  const classesSectionLeagues = cl({
+    'flex items-center flex-col justify-center': !filteredLeagues?.length,
+    'flex-1': true
+  })
+
   return (
     <main className="container flex flex-col">
       <Search query={query} setQuery={setQuery} />
-      <section className="flex items-center flex-col justify-center flex-1">
+      <section className={classesSectionLeagues}>
         {
-          load ? <Loader /> 
-          : error ? <h1 className='text-red-500'>{error.message}</h1>
-          : content
+          load ? <Loader />
+            : error ? <h1 className='text-red-500'>Ошибка загрузки данных</h1>
+              : content
         }
       </section>
     </main>
